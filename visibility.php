@@ -7,7 +7,7 @@ class Produk {
             $penulis,
             $penerbit;
 
-    protected $harga;
+    private $harga;
         
 
     public function __construct( $judul ="judul", $penulis = "penulis", $penerbit = "penerbit", $harga = 0 ){
@@ -15,6 +15,10 @@ class Produk {
         $this->penulis = $penulis;
         $this->penerbit = $penerbit;
         $this->harga = $harga; 
+    }
+
+    public function getHarga() {
+        return $this->harga;
     }
 
     public function getLabel() {
@@ -55,13 +59,7 @@ class Game extends Produk {
         $this->waktuMain = $waktuMain;
     }
 
-
-    public function getHarga(){
-        return $this->harga;
-    }
-
-    public function getInfoProduk()
-    {
+    public function getInfoProduk() {
         $str = "Game : " . parent::getInfoProduk() ."   - {$this->waktuMain} Jam.";
         return $str;
     }   

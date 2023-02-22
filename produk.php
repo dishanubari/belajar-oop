@@ -22,7 +22,7 @@ class Produk {
 $produk3 = new Produk();
 $produk3->judul = "Hujan";
 $produk3->penulis = "Tere Liye";
-$produk3->penerbit = "PT Bentang Aksara";
+$produk3->penerbit = "PT. Gramedia Pustaka Utama";
 $produk3->harga = 50000;
 
 $produk4 = new Produk();

@@ -5,8 +5,9 @@ use Produk as GlobalProduk;
 class Produk {
     public $judul,
             $penulis,
-            $penerbit,
-            $harga;
+            $penerbit;
+
+    protected $harga;
         
 
     public function __construct( $judul ="judul", $penulis = "penulis", $penerbit = "penerbit", $harga = 0 ){
@@ -54,6 +55,11 @@ class Game extends Produk {
         $this->waktuMain = $waktuMain;
     }
 
+
+    public function getHarga(){
+        return $this->harga;
+    }
+
     public function getInfoProduk()
     {
         $str = "Game : " . parent::getInfoProduk() ."   - {$this->waktuMain} Jam.";
@@ -78,4 +84,4 @@ echo $produk2->getInfoProduk();
 echo "<hr>";
 
 
-echo $produk2->harga;
+echo $produk2->getHarga();

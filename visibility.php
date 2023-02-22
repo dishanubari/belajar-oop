@@ -69,9 +69,13 @@ class CetakInfoProduk {
     }
 }
 
-$produk1 = new Novel("Hujan", "Tere Liye", "PT Bentang Aksara", 50000, 100);
+$produk1 = new Novel("Hujan", "Tere Liye", "PT. Gramedia Pustaka Utama", 50000, 100);
 $produk2 = new Game("Uncharted", "Neil Druckman", "Sony Computer", 250000, 50);
 
 echo $produk1->getInfoProduk();
 echo "<br>";
 echo $produk2->getInfoProduk();
+echo "<hr>";
+
+
+echo $produk2->harga;

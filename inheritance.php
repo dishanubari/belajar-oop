@@ -13,7 +13,7 @@ class Produk {
         $this->judul = $judul;
         $this->penulis = $penulis;
         $this->penerbit = $penerbit;
-        $this->harga = $harga;
+        $this->harga = $harga; 
         $this->jmlHalaman = $jmlHalaman;
         $this->waktuMain = $waktuMain; 
         $this->tipe = $tipe;

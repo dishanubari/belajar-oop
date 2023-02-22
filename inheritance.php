@@ -27,13 +27,7 @@ class Produk {
 
 
     public function getInfoProduk(){
-     $str = "{$this->tipe} : {$this->judul} | {$this->getLabel()} (Rp. {$this->harga})";
-     if( $this->tipe == "Novel" ) {
-        $str .= " - {$this->jmlHalaman} Halaman.";
-     } else if( $this->tipe == "Game") {
-        $str .= " ~ {$this->waktuMain} Jam.";
-     }
-
+     $str ="{$this->judul} | {$this->getLabel()} (Rp. {$this->harga})";
      return $str;
     }
 }

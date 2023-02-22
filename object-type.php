@@ -28,7 +28,7 @@ class CetakInfoProduk {
     }
 }
 
-$produk1 = new Produk("Hujan", "Tere Liye", "PT Bentang Aksara", 50000);
+$produk1 = new Produk("Hujan", "Tere Liye", "PT. Gramedia Pustaka Utama", 50000);
 $produk2 = new Produk("Uncharted", "Neil Druckman", "Sony Computer", 250000);
 
 

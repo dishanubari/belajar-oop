@@ -1,5 +1,7 @@
 <?php
 
+use Produk as GlobalProduk;
+
 class Produk {
     public $judul,
             $penulis,
@@ -24,7 +26,7 @@ class Produk {
     }
 
 
-    public function getInfoLengkap(){
+    public function getInfoProduk(){
      $str = "{$this->tipe} : {$this->judul} | {$this->getLabel()} (Rp. {$this->harga})";
      if( $this->tipe == "Novel" ) {
         $str .= " - {$this->jmlHalaman} Halaman.";
@@ -36,6 +38,22 @@ class Produk {
     }
 }
 
+class Novel extends Produk {
+    public function getInfoProduk()
+    {
+        $str = "Novel : {$this->judul} | {$this->getLabel()} (Rp. {$this->harga}) - {$this->jmlHalaman} Halaman.";
+        return $str;
+    }   
+}
+
+class Game extends Produk {
+    public function getInfoProduk()
+    {
+        $str = "Game : {$this->judul} | {$this->getLabel()} (Rp. {$this->harga}) - {$this->waktuMain} Jam.";
+        return $str;
+    }   
+}
+
 
 class CetakInfoProduk {
     public function cetak( $produk ) {
@@ -44,9 +62,9 @@ class CetakInfoProduk {
     }
 }
 
-$produk1 = new Produk("Hujan", "Tere Liye", "PT Bentang Aksara", 50000, 100, 0, "Novel");
-$produk2 = new Produk("Uncharted", "Neil Druckman", "Sony Computer", 250000, 0, 50, "Game");
+$produk1 = new Novel("Hujan", "Tere Liye", "PT Bentang Aksara", 50000, 100, 0, "Novel");
+$produk2 = new Game("Uncharted", "Neil Druckman", "Sony Computer", 250000, 0, 50, "Game");
 
-echo $produk1->getInfoLengkap();
+echo $produk1->getInfoProduk();
 echo "<br>";
-echo $produk2->getInfoLengkap();
+echo $produk2->getInfoProduk();

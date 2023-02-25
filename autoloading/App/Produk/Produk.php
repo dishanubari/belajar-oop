@@ -1,6 +1,6 @@
 <?php
 
-class Produk {
+Abstract class Produk {
     protected $judul,
             $penulis,
             $penerbit,
@@ -57,6 +57,6 @@ class Produk {
     public function getLabel() {
         return "$this->penulis, $this->penerbit";
     }
-    
-    public function getInfo();
+
+    abstract public function getInfo();
 }

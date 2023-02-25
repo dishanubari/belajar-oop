@@ -10,9 +10,15 @@ class Novel extends Produk implements InfoProduk {
         $this->jmlHalaman = $jmlHalaman;
     }
 
+    public function getInfo(){
+        $str ="{$this->judul} | {$this->getLabel()} (Rp. {$this->harga})";
+
+        return $str;
+    }
+
     public function getInfoProduk()
     {
-        $str = "{$this->judul} | {$this->getLabel()} (Rp. {$this->harga})";
+        $str = "Novel : " . $this->getInfo() . " - {$this->jmlHalaman} Halaman.";
         return $str;
     }   
 }

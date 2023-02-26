@@ -12,6 +12,10 @@ require_once 'App/init.php';
 
 
 
-new App\Service\User();
+use App\Service\User as ServiceUser;
+use App\Produk\User as ProdukUser;
+
+
+new ServiceUser();
 echo "<br>";
-new App\Service\User();
+new ProdukUser();
